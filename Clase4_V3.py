@@ -4,6 +4,12 @@ class Paciente:
         self.__cedula = 0 
         self.__genero = '' 
         self.__servicio = '' 
+
+    def __str__(self): # Dirigido a usarios del programa
+        return f"Nombre: {self.__nombre}\nCédula: {self.__cedula}"
+    
+    def __repr__(self): #Dirigido a programadores
+        return f"Nombre: {self.__nombre}\nCédula: {self.__cedula}"
               
     #metodos get    
     def verNombre(self):
@@ -51,6 +57,8 @@ class Sistema:
 
 def main():
     sis = Sistema() 
+    sis2 = Sistema() 
+    sis3 = Sistema() 
     #probemos lo que llevamos programado
     while True:
         #TAREA HACER EL MENU
@@ -82,7 +90,7 @@ def main():
             c = int(input("Ingrese la cedula a buscar: ")) 
             #le pido al sistema que me devuelva en la variable p al paciente que tenga
             #la cedula c en la lista
-            p = sis.verDatosPaciente(c) 
+            p = sis3.verDatosPaciente(c) 
             #2. si encuentro al paciente imprimo los datos
             if p != None:
                 print("Nombre: " + p.verNombre()) 
