@@ -74,7 +74,7 @@ def main():
                 #3. se almacena en la lista que esta dentro de la clase sistema
                 r = sis.ingresarPaciente(pac)             
                 if r:
-                    print("Paciente ingresado") 
+                    print("si") 
                 else:
                     print("No ingresado") 
         elif opcion == 2:
