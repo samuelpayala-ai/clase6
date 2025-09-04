@@ -85,6 +85,7 @@ def main():
                     print("Paciente ingresado") 
                 else:
                     print("No ingresado") 
+
         elif opcion == 2:
             #1. solicito la cedula que quiero buscar
             c = int(input("Ingrese la cedula a buscar: ")) 
@@ -93,10 +94,11 @@ def main():
             p = sis3.verDatosPaciente(c) 
             #2. si encuentro al paciente imprimo los datos
             if p != None:
-                print("Nombre: " + p.verNombre()) 
-                print("Cedula: " + str(p.verCedula())) 
-                print("Genero: " + p.verGenero()) 
-                print("Servicio: " + p.verServicio()) 
+                print(p) 
+                # print("Nombre: " + p.verNombre()) 
+                # print("Cedula: " + str(p.verCedula())) 
+                # print("Genero: " + p.verGenero()) 
+                # print("Servicio: " + p.verServicio()) 
             else:
                 print("No existe un paciente con esa cedula") 
         elif opcion !=0:
